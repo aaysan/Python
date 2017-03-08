@@ -9,16 +9,15 @@ if len(fp) < 1:
 
 handle = open(fp);
 
-totalsum = 0
-count = 0
+totalsum = 0 # the total sum
+
 
 for line in handle:
 
     line = line.rstrip();
-    res = re.findall('[0-9]+',line);
+    res = re.findall('[0-9]+',line); #use regex to find all the numbers in a given file
 
     for num in res:
-        count = count + 1
-        totalsum = totalsum + int(num)
+        totalsum = totalsum + int(num) #add them
 
-print totalsum
+print totalsum ##display
